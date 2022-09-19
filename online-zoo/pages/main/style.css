@@ -31,12 +31,12 @@ a {
 .header_container {
     width: 1160px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: row;
 }
 .designed_header {
-    align-items: flex-end;
+    margin-left: 440px;
 }
   h1 {
 font-family: 'Roboto';
@@ -56,7 +56,7 @@ padding: 5px;
     align-items: center;
   }
   .header_logo {
-    margin-right: 63px;
+    margin-right: 22px;
     width: 82px;
   }
   .header_list {
@@ -85,18 +85,18 @@ cursor: pointer;
   }
 
   .section1 {
- 
     background-image: url(../../assets/images/Giant\ Panda.jpg);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: contain;
     height: 780px; 
     width: 100%;
+
   }
 .ellipse {
     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
     width: 465px;
-height: 465px;
+ height: 465px; 
 border-radius: 50%;
 position: relative;
 top: 12px;
@@ -107,7 +107,7 @@ left: calc(50% - 465px/2 + 239.5px);
     justify-content: center;
     position: relative;
     top: 74px;
-    left: 73px;
+    left: 90px;
 }
 .titleElipse {
  
@@ -128,18 +128,19 @@ background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
  border-radius: 25px;
  padding: 16px 35px;
  width: 298px;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    top: 60px;
-    left: 984px;
+ top: 135px;
+ left: 176px;
+ position: relative;
+ display: flex;
+ justify-content: center;
+ height: 54px;
 }
 .watchOnline {
 font-family: 'Roboto';
 font-weight: 500;
 font-size: 16px;
 line-height: 140%;
-text-align: center;
+ text-align: center; 
 text-transform: uppercase;
 color: #FFFFFF;
 }
@@ -201,7 +202,7 @@ color: #333B41;
     background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
-    margin-top: 180px;
+    margin-top: 175px;
     align-items: center;
 } 
 .section3_content {
@@ -220,6 +221,7 @@ color: #333B41;
     flex-direction: column;
     border: 1px solid;
     border-color: #FA6F32;
+    border-radius: 5px;
 }
 .animals_img {
     width: 100%;
@@ -228,7 +230,7 @@ color: #333B41;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 4px 13px 14px 16px;
+    padding: 4px 8px 10px 14px;
 }
 .name_animals {
     font-family: 'Roboto';
@@ -252,6 +254,12 @@ color: #000000;
  width: 298px;
  margin-top: 80px;
 
+}
+.section4_btn {
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+ border-radius: 25px;
+ padding: 16px 35px;
+ width: 298px;
 }
 .section4 {
     margin-top: 100px;
@@ -334,7 +342,7 @@ color: #333B41;
     text-align: center; 
 }
 .section4_title_center {
-    padding-left: 99px;
+    padding-left: 40px;
 }
 .section4_pay {
     margin-top: 40px;
@@ -342,12 +350,25 @@ color: #333B41;
     flex-direction: row;
     justify-content: center;
     gap: 30px;
-    align-items: center;
+    
 }
 .section4_card {
     display: flex;
     flex-direction: column;
     gap: 30px;
+}
+.section4_vector {
+    display: flex;
+    align-items: center;
+}
+.section_title_container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 766px;
+    margin-top: 30px;
+    margin-bottom: 65px;
+    justify-content: space-around;
 }
 .section4_card_title p {
     font-family: 'Roboto';
@@ -366,7 +387,7 @@ color: #333B41;
 .section5_content {
     display: flex;
     flex-direction: column;
-    margin-top: 140px;
+    margin-top: 100px;
     justify-content: center;
     align-items: center;
 }
@@ -384,6 +405,7 @@ color: #333B41;
     display: flex;
     flex-direction: row;
     gap: 30px;
+    margin-top: 10px;
 }
 .feedback_card {
 width: 266px;
@@ -392,7 +414,7 @@ background: #F1F3F2;
 border-radius: 20px;
 border: 2px solid;
 border-color: #F9804B;
-padding-left: 16px;
+padding-left: 13px;
 padding-top: 15px;
 }
 .slider input{
@@ -424,7 +446,7 @@ cursor: pointer;
 
 .section5_btn {
     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-    border-radius: 25px;
+    border-radius: 5px;
     padding: 16px 35px;
     width: 298px;
     margin-top: 31px;
@@ -495,7 +517,7 @@ footer {
     flex-direction: column;  
 }
 .logo {
-margin-top: 41px;
+margin-top: 37px;
 width: 82px;
 }
 .logo p {
@@ -512,12 +534,12 @@ width: 82px;
 }
 .footer_btn {
     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-    border-radius: 25px;
+    border-radius: 5px;
     padding: 16px 35px;
     width: 298px;
-    margin-top: 68px;
+    margin-top: 60px;
     align-self: flex-start;
-    margin-bottom: 44px;
+    margin-bottom: 45px;
 }
 .footer_social {
     display: flex;
@@ -528,6 +550,7 @@ width: 82px;
     display: flex;
     flex-direction: row;
     gap: 12px;
+    align-items: center;
 }
 .social_img {
     background-color: rgba(196, 196, 196, 0.5);
@@ -572,6 +595,8 @@ letter-spacing: 0.2px;
     flex-wrap: wrap;
     gap: 58px;
     text-decoration: none;
+    padding: 0px;
+    margin: 0px;
   }
   .submit {
     margin-top: 14px;
@@ -582,17 +607,22 @@ letter-spacing: 0.2px;
     border-color: #F9804B;
     outline:none;
     height: 42px;
+    width: 228px;
     color: #E0D8F0;
   }
   .btn-primary {
     padding: 10px 39px;
     height: 42px;
     color: #4B9200;
+    margin-left: 8px;
     /* border-color: #4B9200; */
   }
   .designed_by {
     margin-top: 216px;
     align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
   }
   .designed_by p{
     font-family: 'Roboto';

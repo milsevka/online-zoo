@@ -36,7 +36,7 @@ a {
     flex-direction: row;
 }
 .designed_header {
-    align-items: flex-end;
+    margin-left: 440px;
 }
   h1 {
 font-family: 'Roboto';
@@ -56,7 +56,7 @@ padding: 5px;
     align-items: center;
   }
   .header_logo {
-    margin-right: 63px;
+    margin-right: 22px;
     width: 82px;
   }
   .header_list {
@@ -265,6 +265,21 @@ background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
  margin-bottom: 30px;
 
 }
+
+.watchOnline {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    }
+
+
+
+
+
 footer {
     background-color: #000000;
     width: 100%;
@@ -288,7 +303,7 @@ footer {
     flex-direction: column;  
 }
 .logo {
-margin-top: 41px;
+margin-top: 37px;
 width: 82px;
 }
 .logo p {
@@ -305,22 +320,13 @@ width: 82px;
 }
 .footer_btn {
     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-    border-radius: 25px;
+    border-radius: 5px;
     padding: 16px 35px;
     width: 298px;
-    margin-top: 68px;
+    margin-top: 60px;
     align-self: flex-start;
-    margin-bottom: 44px;
+    margin-bottom: 45px;
 }
-.watchOnline {
-    font-family: 'Roboto';
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 140%;
-    text-align: center;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    }
 .footer_social {
     display: flex;
     flex-direction: column;
@@ -330,6 +336,7 @@ width: 82px;
     display: flex;
     flex-direction: row;
     gap: 12px;
+    align-items: center;
 }
 .social_img {
     background-color: rgba(196, 196, 196, 0.5);
@@ -374,32 +381,40 @@ letter-spacing: 0.2px;
     flex-wrap: wrap;
     gap: 58px;
     text-decoration: none;
-}
-.submit {
+    padding: 0px;
+    margin: 0px;
+  }
+  .submit {
     margin-top: 14px;
-}
-.form-control {
+  }
+  .form-control {
     border-radius: 2px;
     background-color: #000000;
     border-color: #F9804B;
     outline:none;
     height: 42px;
+    width: 228px;
     color: #E0D8F0;
-}
-.btn-primary {
+  }
+  .btn-primary {
     padding: 10px 39px;
     height: 42px;
     color: #4B9200;
-}
-.designed_by {
+    margin-left: 8px;
+    /* border-color: #4B9200; */
+  }
+  .designed_by {
     margin-top: 216px;
     align-self: flex-end;
-}
-.designed_by p{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .designed_by p{
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 100;
     font-size: 16px;
     line-height: 130%;
     color: #FFFFFF;
-}
+  }
