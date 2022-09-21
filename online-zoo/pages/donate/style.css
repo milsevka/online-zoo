@@ -58,6 +58,12 @@ padding: 5px;
   .header_logo {
     margin-right: 22px;
     width: 82px;
+    position: relative;
+  }
+  .header_logo img {
+    position: absolute;
+    top: 40px;
+    left: 11px;
   }
   .header_list {
     /* width: 1160px; */
@@ -77,6 +83,9 @@ text-align: center;
 color: #ffffff;
 cursor: pointer;
   }
+  li a:hover {
+    color: #E47209; 
+}
   .header_item a {
     text-decoration: none;
     display: inline-block;
@@ -269,12 +278,9 @@ color: #333B41;
 }
 .input-icon {
     position: relative; 
-    
+   
 }
-/* .form-group {
-    width: 268px;
-    height: 54px;
-} */
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -291,13 +297,19 @@ input::-webkit-inner-spin-button {
     text-align: center;
     font-style: normal;
 }
-  
+.input-icon input:focus {
+  color: #4B9200;
+}
+
+
   .input-icon input {
     padding-left: 25px;
     padding-right: 0;
     color: #353d3f;
     cursor: pointer;
+   
 }
+
   
   .input-icon-right > i {
     right: 0;
@@ -306,15 +318,19 @@ input::-webkit-inner-spin-button {
 .form-group input[type=number]{
     width:268px;
     height: 54px;
-    
+    border-color: #929699;
+    margin-top: 10px;
  }
-  
+
   .input-icon-right > input {
     padding-left: 5px;
     padding-right: 25px;
     text-align: left;
     background-color: transparent;
-  
+  }
+  .input-icon-right > input:focus {
+ 
+    border-color: #4B9200;
   }
   
 
@@ -327,6 +343,18 @@ background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
  margin-bottom: 30px;
  cursor: pointer;
 
+}
+.section3_btn:hover { 
+  background: #E47209;
+}
+.section3_btn:active { 
+  background: #4B9200;
+}
+.footer_btn:hover { 
+  background: #E47209;
+}
+.footer_btn:active { 
+  background: #4B9200;
 }
 
 .watchOnline {
@@ -412,7 +440,7 @@ width: 82px;
     justify-content: center;
     align-items: center;
 }
-.social p {
+.social a {
     
 font-family: 'Roboto';
 font-style: normal;
@@ -451,6 +479,9 @@ letter-spacing: 0.2px;
   }
   .submit {
     margin-top: 14px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
   }
   .form-control {
     border-radius: 2px;
@@ -462,12 +493,26 @@ letter-spacing: 0.2px;
     color: #E0D8F0;
   }
   .btn-primary {
-    padding: 10px 39px;
+  width: 129px;
+  text-align: center;
     height: 42px;
-    color: #4B9200;
-    margin-left: 8px;
-    cursor: pointer;
+color: black;
+background-color: #F1F3F2;
+cursor: pointer;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 140%;
   }
+  .btn-primary:active { 
+    color:#4B9200;
+    border-color: #4B9200;
+ }
+ .btn-primary:hover { 
+  color:#4B9200;
+  border-color: #4B9200;
+}
   .designed_by {
     margin-top: 216px;
     align-self: flex-end;
@@ -482,4 +527,9 @@ letter-spacing: 0.2px;
     font-size: 16px;
     line-height: 130%;
     color: #FFFFFF;
+  }
+  .designed_by p:active{
+    color: #4B9200;
+    border-bottom: 1px solid;
+    border-color: #4B9200;
   }
