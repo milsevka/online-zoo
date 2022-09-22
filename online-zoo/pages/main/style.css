@@ -87,6 +87,16 @@ text-align: center;
 color: #ffffff;
 cursor: pointer;
   }
+  .header_item_about a{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    line-height: 140%;
+    text-align: center;
+    color: #E47209;
+    /* cursor: pointer; */
+  }
   li a:hover {
     color: #E47209; /* Цвет текста активного пункта */
 }
@@ -683,9 +693,12 @@ width: 82px;
     justify-content: center;
     align-items: center;
 }
-.social_img:hover {
+.social:hover .social_img {
   background-color: #4B9200;  
 }
+.social:hover a {
+    color: #4B9200;  
+  }
 .social a {    
 font-family: 'Roboto';
 font-style: normal;
@@ -695,9 +708,7 @@ line-height: 140%;
 color: #FFFFFF;
 text-decoration: none;
 }
-.social a:hover {
-    color: #4B9200;
-}
+
 .footer_nav {
     display: flex;
     justify-content: flex-start;
