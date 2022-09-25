@@ -250,13 +250,16 @@ color: #333B41;
   margin-top: 80px;
   width: 976px;
   height: 27px;
+ 
   background-color: #404950;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 89px;
   position: relative;
 }
+
 .slider_light {
 width: 915px;
 height: 2px;
@@ -266,10 +269,35 @@ position: absolute;
 .slider_cards {
   display: flex;
   flex-direction: row;
-  gap: 70px;
+  position: absolute;
+ gap: 50px;
+  width: 100%;
+ 
     padding-top: 55px;
-    padding-right: 10px;
+    padding-right: 10px;  
 }
+.slider_card:nth-child(2) {
+margin-right: 7px;
+ }
+ .slider_card:nth-child(3) {
+  margin-right: 12px;
+   }
+   .slider_card:nth-child(4) {
+    margin-right: 22px;
+     }
+     .slider_card:nth-child(5) {
+      margin-right: 22px;
+       }
+       .slider_card:nth-child(6) {
+        margin-right: 24px;
+         }
+         .slider_card:nth-child(7) {
+          margin-right: 24px;
+           }
+           .slider_card:nth-child(8) {
+         
+            align-items: flex-end;
+             }
 .slider_dot {
   width: 10px;
   height: 10px;
@@ -286,7 +314,8 @@ font-size: 26px;
 line-height: 140%;
 text-transform: uppercase;
 color: #333B41;
-}
+cursor: pointer;
+ }
 .slider_number_active p {
   font-family: 'Roboto';
 font-style: normal;
@@ -296,6 +325,10 @@ line-height: 140%;
 text-transform: uppercase;
 color: #E47209;
 }
+.active_num p{
+  color: #E47209; 
+}
+
 .slider_dot_active {
   width: 10px;
   height: 10px;
@@ -304,6 +337,7 @@ color: #E47209;
   position: relative;
   z-index: 2;
 }
+
 
 .slider_dot_active::before {
     content: '';
@@ -337,6 +371,7 @@ color: #E47209;
   left: -10px;
   }
 
+
 .slider_card {
   display: flex;
   flex-direction: column;
@@ -346,8 +381,19 @@ color: #E47209;
   gap: 21px;
   cursor: pointer;
 }
-.slider_card:hover .slider_dot {
-background-color: #E47209;
+.slider_numbers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  /* margin-top: 87px; */
+}
+/* .slider_dot:active {
+  background-color: #E47209;  
+} */
+
+.slider_card:hover .slider_dot{
+  background-color: #E47209;
 }
 .slider_card:hover .slider_number p{
   color: #E47209;
