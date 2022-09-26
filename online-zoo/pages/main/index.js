@@ -1,19 +1,12 @@
-export function validate(){
-    let form = document.getElementsByClassName("submit");
-    let email = document.getElementById("exampleInputEmail1").value;
-    let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-    if(email.match(pattern))
-    {
-        form.classList.add("valid");
-        console.log('ndndndn')
-        // form.classList.remove("invalid");
-    }
-    // else{
-    //     form.classList.remove("valid");
-    //     form.classList.add("invalid");
-    // }
-    // if (email == "") {
-    //     form.classList.remove("valid");
-    //     form.classList.remove("invalid");
-    // }
-} 
+let input = document.querySelector('.form-control');
+input.addEventListener('input', onInput);
+const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+function onInput() {
+  if (isEmailValid(input.value)) {
+    input.style.borderColor = 'green';
+  } else {
+    input.style.borderColor = 'red';
+  }
+}
+function isEmailValid(value) {
+return EMAIL_REGEXP.test(value)};

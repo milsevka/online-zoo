@@ -109,7 +109,7 @@ li a:hover {
   line-height: 1;
   color: #e47209;
 }
-.section1 {
+.panda {
   background-image: url(../../assets/images/panda_donate.jpg);
   background-repeat: no-repeat;
   background-position: center top;
@@ -117,7 +117,7 @@ li a:hover {
   height: 390px;
   width: 100%;
 }
-.section4 {
+.section-donation {
   padding-bottom: 179px;
   background: linear-gradient(
       315.75deg,
@@ -295,64 +295,48 @@ li a:hover {
   line-height: 140%;
   color: #333b41;
 }
-.input-icon {
-  position: relative;
+
+.form-control {
+  width: 268px;
+  height: 54px;
+  padding-left: 15px;
+  background-color: transparent;
+  background: url(../../assets/icons/dollar.png);
+  background-repeat: no-repeat;
+  background-position: 96% center;
+  border: 1px solid #929699;
+  border-radius: 3px;
+  color: #929699;
+  margin-top: 10px;
+  outline: none;
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+}
+.form-control:valid{
+  color: #929699;
+  border: 1px solid #929699;
+}
+.form-control:focus{
+  border: 1px solid #4b9200;
+  color: #4b9200;
+  background: url(../../assets/icons/dollargreen.png);
+  background-repeat: no-repeat;
+  background-position: 96% center;
+}
+.form-control:invalid{
+  border: 1px solid red;
+  color: red;
+  background: url(../../assets/icons/dollarred.png);
+  background-repeat: no-repeat;
+  background-position: 96% center;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-.input-icon i {
-  color: #929699;
-  position: absolute;
-  display: block;
-  transform: translate(0, -50%);
-  top: 50%;
-  pointer-events: none;
-  width: 25px;
-  text-align: center;
-  font-style: normal;
-}
-.input-icon input:focus {
-  color: #4b9200;
-}
-
-.input-icon input {
-  padding-left: 25px;
-  padding-right: 0;
-  color: #353d3f;
-  cursor: pointer;
-}
-
-.input-icon-right > i {
-  right: 0;
-}
-
-.form-group input[type="number"] {
-  width: 268px;
-  height: 54px;
-  border-color: #929699;
-  margin-top: 10px;
-}
-.form-group input[type="number"]::placeholder {
-  font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 140%;
-color: #929699;
-}
-
-.input-icon-right > input {
-  padding-left: 5px;
-  padding-right: 25px;
-  text-align: left;
-  background-color: transparent;
-}
-.input-icon-right > input:focus {
-  border-color: #4b9200;
 }
 
 .section3_btn {
@@ -364,6 +348,15 @@ color: #929699;
   margin-bottom: 30px;
   margin-left: 5px;
   cursor: pointer;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: none;
+
 }
 .section3_btn:hover {
   background: #e47209;
@@ -451,11 +444,6 @@ footer {
   display: flex;
   flex-direction: column;
 }
-/* #contactChoice2 , #contactChoice3 {
-    transform:scale(1.3);
-    opacity:0.9;
-    cursor:pointer;
-} */
 .logo {
   margin-top: 37px;
   width: 82px;
@@ -491,7 +479,7 @@ footer {
   line-height: 140%;
   color: #bdbdbd;
 }
-.form-control {
+.form-control-btn {
   padding-left: 8px;
 }
 
@@ -564,15 +552,19 @@ footer {
   gap: 10px;
   align-items: center;
 }
-.form-control {
+.form-control-btn {
   border-radius: 2px;
   background-color: #000000;
-  border-color: #f9804b;
+  border-color: #e47209;
   outline: none;
   height: 42px;
   width: 228px;
   color: #e0d8f0;
 }
+.form-control-btn:focus {
+  border-color: #4b9200;
+}
+
 .btn-primary {
   width: 129px;
   text-align: center;
@@ -653,15 +645,15 @@ footer {
   background-color: #ffee2e;
   position: relative;
   z-index: 2;
-  margin-top: 54px;
+  margin-top: 56px;
   margin-bottom: 21px;
 }
 
 .slider-item input[type="radio"]:checked:before {
   content: "";
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   -moz-border-radius: 7.5px;
   -webkit-border-radius: 7.5px;
   border-radius: 50%;
@@ -670,15 +662,15 @@ footer {
   background-color: transparent;
   position: absolute;
   z-index: 1;
-  top: -5px;
-  right: -5px;
+  top: -8px;
+  right: -8px;
 }
 
 .slider-item input[type="radio"]:checked::after {
   content: "";
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   -moz-border-radius: 7.5px;
   -webkit-border-radius: 7.5px;
   border-radius: 50%;
@@ -686,8 +678,8 @@ footer {
   border-color: #e47209;
   background-color: transparent;
   position: absolute;
-  top: -10px;
-  left: -10px;
+  top: -15px;
+  left: -15px;
 }
 .slider-radio:checked ~.line-label .number-text {
   color: #e47209;
