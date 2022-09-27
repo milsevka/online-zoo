@@ -106,7 +106,7 @@ h1 {
   line-height: 140%;
   text-align: center;
   color: #e47209;
-  /* cursor: pointer; */
+  cursor: default;
 }
 li a:hover {
   color: #e47209; /* Цвет текста активного пункта */
@@ -337,7 +337,7 @@ li a:hover {
 .card_animals:hover .card_animals_title p {
   color: #e0d8f0;
 }
-.home_animals {
+.home_animal {
   font-family: "Roboto";
   font-weight: 300;
   font-size: 15px;
