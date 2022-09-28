@@ -34,7 +34,7 @@ a {
 .header_container {
   width: 1160px;
   display: flex;
-  justify-content: flex-start;
+
   align-items: center;
   flex-direction: row;
 }
@@ -885,9 +885,7 @@ footer {
   }
 }
 @media screen and (max-width: 1000px) {
-  .designed_header {
-    margin-left: 259px;
-}
+
 .section1 {
   height: 584px;
 }
@@ -904,9 +902,16 @@ footer {
 .elipse_title {
   top: 58px;
 }
+.designed_by {
+  margin-left: 260px;
+}
 .header {
-  position: relative;
-  z-index: 10;
+
+  padding-left: 30px;
+    padding-right: 30px;
+}
+.header_list {
+  gap: 48px;
 }
 .button_watch {
   top: 60px;
