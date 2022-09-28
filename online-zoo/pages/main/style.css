@@ -207,9 +207,14 @@ li a:hover {
   display: flex;
   flex-direction: column;
   margin-left: 87px;
+  word-wrap: break-word;
+  word-break: normal;
 }
 .section2_content_img img {
-  width: 100%;
+  width: 609px;
+}
+.section2_content_img1000 img{
+  display: none;
 }
 .title1 {
   font-family: "Roboto";
@@ -245,6 +250,7 @@ li a:hover {
   font-size: 16px;
   line-height: 140%;
   color: #333b41;
+ 
 }
 .section3 {
   background-color: #ffffff;
@@ -270,15 +276,20 @@ li a:hover {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  position: relative;
 }
 .section3_content {
   display: flex;
-  flex-direction: row;
   width: 1322px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
-.section3_arrow {
+.section3_animals::after {
+  content: url(../../assets/icons/arrow_animals.svg);
+  position: absolute;
+  top: 407px;
+  /* right: calc(50% - 367px / 2 + 150px); */
+  right: -87px;
   width: 62px;
   height: 62px;
   background-color: #f9804b;
@@ -286,8 +297,23 @@ li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  cursor: pointer; 
 }
+.section3_animals::before {
+  content: url(../../assets/icons/arrow2_animals.svg);
+  position: absolute;
+  top: 407px;
+  left: -87px;
+  width: 62px;
+  height: 62px;
+  background-color: #f9804b;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; 
+}
+
 .section3_arrow:active {
   background-color: #4b9200;
   transform: scale(1.03);
@@ -857,4 +883,87 @@ footer {
   .section1 {
     background-size: cover;
   }
+}
+@media screen and (max-width: 1000px) {
+  .designed_header {
+    margin-left: 259px;
+}
+.section1 {
+  height: 584px;
+}
+.ellipse {
+  width: 367px;
+  height: 367px;
+  top: -35px;
+  left: calc(50% - 367px / 2 + 150px);
+}
+.titleElipse {
+  font-size: 85px;
+  line-height: 75%;
+}
+.elipse_title {
+  top: 58px;
+}
+.header {
+  position: relative;
+  z-index: 10;
+}
+.button_watch {
+  top: 60px;
+}
+.section2 {
+  margin-top: 0;
+}
+.section2_content {
+  width: 940px;
+}
+#flowerBig {
+  display: none;
+}
+.section2_content_img {
+  display: none;
+}
+.section2_content_img1000 img{
+  width: 455px;
+  display: inline;
+}
+.section2_content_title {
+  margin-left: 31px;
+}
+.section3 {
+  margin-top: 142px;
+}
+.section3_content {
+  width: 940px;
+ 
+}
+.section3_animals {
+  gap: 92px;
+}
+.section3_animals::after{
+  top: 370px;
+  right: 350px;
+}
+.section3_animals::before{
+  top: 370px;
+  left: 350px;
+}
+.section4 {
+  margin-top: 140px;
+}
+.section4_content {
+  width: 940px;
+}
+.section5_content {
+  width: 940px;
+}
+.feedback_card:last-child {
+  display: none;
+}
+.section5_btn {
+  margin-bottom: 140px;
+}
+.footer_content {
+  width: 940px;
+}
 }

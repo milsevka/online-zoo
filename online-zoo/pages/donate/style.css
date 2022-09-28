@@ -697,3 +697,32 @@ z-index: 100;
 transition: 0.2s;
 outline: none;
 }
+@media screen and (max-width: 1000px) { 
+  .designed_header {
+    margin-left: 0;
+  }
+  .section4_conteiner {
+    width: 940px;
+  }
+  .section-donation {
+    padding-bottom: 30px;
+  }
+  .footer_content {
+    width: 940px;
+  }
+  .section4_title2 {
+    margin-right: 0;
+  }
+  .slider {
+    width: 810px;
+  }
+  .slider_light {
+    width: 785px;
+  }
+  .slider-item:first-child {
+    display: none;
+  }
+  .line-label {
+    width: 36px;
+  }
+ }
