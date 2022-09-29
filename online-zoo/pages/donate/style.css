@@ -5,6 +5,8 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+    /* box-sizing: border-box;
+  outline: 1px solid lawngreen !important; */
 }
 html {
   scroll-behavior: smooth;
@@ -428,13 +430,28 @@ footer {
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
+  padding-bottom: 50px;
 }
 .footer_content {
   width: 1160px;
   display: flex;
+  flex-direction: column;
+}
+.footer-line1 {
+  display: flex;
   flex-direction: row;
-  margin-bottom: 50px;
-  gap: 101px;
+  justify-content: space-between;
+}
+.footer-line2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.footer-line3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .footer_info {
   display: flex;
@@ -460,6 +477,12 @@ footer {
   color: #ffffff;
   border: 1px solid #ffffff;
   padding: 5px;
+}
+.footer-tablet {
+  display: none;
+}
+.footer-mobile {
+  display: none;
 }
 .footer_btn {
   background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
@@ -588,7 +611,7 @@ footer {
   border-color: #4b9200;
 }
 .designed_by {
-  margin-top: 216px;
+  
   align-self: flex-end;
   display: flex;
   flex-direction: column;
@@ -713,6 +736,9 @@ color: #000000;
   .designed_header {
     margin-left: 260px;
   }
+ .panda {
+  background-position-x: 25%;
+ }
   .section4_conteiner {
     width: 940px;
   }
@@ -767,4 +793,209 @@ color: #000000;
   .header_list {
     gap: 48px;
   }
+  .footer_content {
+    width: 940px;
+  }
  }
+ @media screen and (max-width: 841px) { 
+  .header_nav {
+    display: none;
+  }
+  .header {
+    height: 34px;
+  }
+  .panda {
+    background-position-x: 40%;
+    height: 335px;
+   }
+  .section4_conteiner {
+    width: 600px;
+  }
+  .section4_conteiner_mainTitle {
+    font-size: 24px;
+  }
+  .section-donation {
+    padding-bottom: 30px;
+  }
+  .slider {
+    width: 600px;
+  }
+  .slider_light {
+    width: 524px;
+  }
+  .slider-item:nth-child(2) {
+    display: none;
+  }
+  .slider-item:nth-child(3) {
+    display: none;
+  }
+  .line-label {
+    width: 72px;
+  }
+  
+.footer_content {
+  display: none;
+}
+footer {
+  padding-bottom: 12px;
+}
+.footer-tablet {
+  display: flex;
+  flex-direction: row;
+width: 600px;
+padding-top: 12px;
+justify-content: space-between;
+}
+.footer_list {
+  gap: 36px;
+}
+.footer-column1 {
+  display: flex;
+  flex-direction: column;
+}
+.footer_nav {
+  margin-left: 0;
+}
+.footer_btn {
+  margin-top: 32px;
+  margin-bottom: 97px;
+}
+.logo {
+  margin-top: 0;
+}
+.footer-column2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+    align-items: flex-end;
+}
+.footer-mobile {
+  display: none;
+}
+ }
+ @media screen and (max-width: 320px) {
+.header {
+  height: 34px;
+}
+.designed_header {
+  display: none;
+}
+.panda {
+  background-position-x: 37%;
+  height: 187px;
+ }
+h1 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12.2899px;
+  line-height: 120%;
+  text-align: center;
+  color: #FFFFFF;
+  border: none;
+}
+.header_logo {
+  width: 47px;
+}
+.header_logo img {
+  top: 19px;
+  left: 3px;
+}
+.section4_conteiner {
+  width: 300px;
+}
+.section4_conteiner_mainTitle {
+  font-size: 24px;
+}
+.section-donation {
+  padding-bottom: 30px;
+}
+.slider {
+  width: 300px;
+}
+.slider_light {
+  width: 262px;
+}
+.number-text {
+  font-size: 13px;
+}
+
+.slider-item:nth-child(2) {
+  display: none;
+}
+.slider-item:nth-child(3) {
+  display: none;
+}
+.line-label {
+  width: 45px;
+}
+.panda_img img{
+  width: 160px;
+  height: 139px;
+}
+.section4main {
+  font-size: 24px;
+}
+.section4_title2 {
+  font-size: 16px;
+}
+.donate_info {
+  font-size: 24px;
+}
+.panda_diet_day p { 
+  font-size: 9px;
+ }
+ .panda_diet_day img {
+  width: 23px;
+  height: 32px;
+ }
+ .x_icon {
+  margin-right: 36px;
+ }
+ .x_icon img {
+  width: 8px;
+  height: 8px;
+ }
+.footer-tablet {
+  display: none;
+}
+footer {
+padding-top: 20px;
+padding-bottom: 20px;
+}
+.footer-mobile {
+  width: 300px;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer_social {
+  flex-direction: row;
+}
+.logo-mob p {
+  border: none;
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 19.0145px;
+line-height: 120%;
+color: #FFFFFF;
+text-align: center;
+}
+.logo-mob {
+  width: 128px;
+  height: 23px;
+}
+
+.logo-mob img {
+  position: absolute;
+  top: 18px;
+  left: 170px;
+}
+.footer_btn {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+}
