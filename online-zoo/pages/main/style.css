@@ -964,7 +964,7 @@ footer {
   width: 1100px;
  }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
 
 /* .section1 {
   height: 584px;
@@ -1089,7 +1089,7 @@ align-content: center;
   width: 940px;
 }
 }
-@media screen and (max-width: 740px) { 
+@media screen and (max-width: 640px) { 
   .header_nav {
     display: none;
   }
@@ -1233,7 +1233,7 @@ justify-content: space-between;
   display: none;
 }
  }
- @media screen and (max-width: 600px) {
+ @media screen and (max-width: 320px) {
 .header {
   height: 34px;
 }
