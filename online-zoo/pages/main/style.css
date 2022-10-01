@@ -1236,7 +1236,14 @@ align-content: center;
   gap: 48px;
 }
 }
-
+@media screen and (max-width: 950px) { 
+.section3_content {
+  width: 700px;
+}
+.section3_content_column {
+  gap: 70px;
+}
+ }
 @media screen and (max-width: 770px) { 
   .header_nav {
     display: none;
@@ -1375,6 +1382,9 @@ border: none;
   }
   .section3_content {
     width: 600px;
+  }
+  .section3_content_column {
+    gap: 25px;
   }
   .section4_content {
     width: 100%;
