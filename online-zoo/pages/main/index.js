@@ -16,8 +16,10 @@ const menu = document.querySelector(".burger_block");
 const menuClose = document.querySelector(".close_burger");
 const menuItem = document.querySelector(".header_list-burger");
 const burgerItem = document.querySelector(".header_burger");
+// const meow = document.querySelector(".burger_container")
 
 burgerItem.addEventListener("click", () => {
+  // meow.classList.add('hidden-bur')
   menu.classList.toggle("burger_block_active");
   burgerItem.classList.add('inactive')
   // wrapper.classList.add("wrapper_mob_click_active");

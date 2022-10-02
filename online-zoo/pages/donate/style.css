@@ -40,6 +40,23 @@ a {
   height: 10px;
   position: relative;
 }
+/* .burger_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(20, 20, 20, 0.2);
+  transition: 0.5s all;
+}
+.hidden-bur {
+  visibility: hidden;
+  top: -999px;
+  transition: 0.5s all;
+} */
 .burger_block {
   display: none;
 }
@@ -1324,5 +1341,20 @@ text-align: center;
 }
 .designed_by p {
   font-size: 15px;
+}
+
+.slider-radio:checked ~ .slider_dot::before {
+  opacity: 1;
+  width: 15px;
+  height: 15px;
+  top: -5px;
+  right: -5px;
+}
+.slider-radio:checked ~ .slider_dot::after {
+  opacity: 1;
+  width: 25px;
+  height: 25px;
+  top: -10px;
+  left: -10px;
 }
 }
