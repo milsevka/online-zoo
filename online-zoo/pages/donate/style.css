@@ -1019,8 +1019,8 @@ border: none;
     gap: 23px;
   }
   .progress-bar {
-    margin-left: 27px;
-    margin-right: 27px;
+    padding-left: 6px;
+    padding-right: 5px;
   }
   .section4_conteiner_title {
     margin-top: 16px;
@@ -1042,7 +1042,7 @@ border: none;
     display: none;
   }
   .line-label {
-    width: 74px;
+    width: 67px;
   }
   .slider-main-title {
     margin-left: 9px;
@@ -1052,15 +1052,25 @@ border: none;
   .check_pay label {
     display: flex;
     align-items: flex-end;
+    gap: 5px;
   }
   .form-control {
     width: 180px;
     height: 42px;
+    padding-left: 5px;
+    margin-top: 10px;
+  }
+  .logo p {
+    padding: 2px;
   }
   .check_pay {
     margin-top: 25px;
     margin-right: 34px;
-    gap: 47px;
+    margin-left: 10px;
+    gap: 35px;
+  }
+  .check_pay label {
+    line-height: 107%;
   }
 .footer_content {
   display: none;
@@ -1086,7 +1096,7 @@ justify-content: space-between;
   margin-left: 0;
 }
 .footer_btn {
-  margin-top: 27px;
+  margin-top: 33px;
   margin-bottom: 97px;
 }
 .footer_social {
@@ -1152,10 +1162,10 @@ h1 {
   width: 47px;
 }
 .header_nav-mob {
-  height: 170px;
+  height: 220px;
 }
 .header_list-burger {
-  gap: 0px;
+  gap: 10px;
 }
 .header_logo img {
   top: 19px;
@@ -1211,7 +1221,7 @@ h1 {
   gap: 11px;
 }
 .line-label {
-  width: 41px;
+  width: 26px;
 }
 .check_pay {
   margin-top: 22px;
@@ -1311,5 +1321,8 @@ text-align: center;
 .footer_btn {
   margin-top: 0;
   margin-bottom: 0;
+}
+.designed_by p {
+  font-size: 15px;
 }
 }
