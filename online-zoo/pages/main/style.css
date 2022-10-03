@@ -1196,8 +1196,12 @@ align-content: center;
 .section3_btn {
   margin-bottom: 141px;
 }
+.section4_vector {
+  margin-bottom: 10px;
+}
 .section4_title_center {
   padding-left: 50px;
+  padding-right: 47px;
 }
 .section5_content {
   width: 940px;
@@ -1206,6 +1210,7 @@ align-content: center;
 .section5::after {
   content: url(../../assets/images/leav_foto-small.png);
   right: 0;
+  bottom: -91px;
 }
 .feedback {
   margin-top: -5px;
@@ -1377,7 +1382,9 @@ border: none;
   .section2_content_img1000 {
     display: none;
   }
- 
+  .section2_content_title {
+    margin-left: 29px;
+}
   .section2_content {
     width: 495px;
   }
@@ -1493,6 +1500,7 @@ border: none;
     padding-left: 19px;
     flex-direction: column;
     justify-content: flex-start;
+    padding-right: 14px;
   }
   .section4_title2 {
     font-size: 22px;
@@ -1532,9 +1540,9 @@ border: none;
   }
   .feedback_content {
     padding-top: 11px;
-    padding-bottom: 9px;
-    padding-left: 10px;
-    gap: 7px;
+    padding-bottom: 10px;
+    padding-left: 14px;
+    gap: 8px;
 
   }
   .section5_btn {
@@ -1895,7 +1903,7 @@ h1 {
   padding-bottom: 40px;
 }
 .section4_btn {
-  margin-top: 34px;
+  margin-top: 39px;
 }
 .section4main {
   font-size: 24px;
@@ -1922,7 +1930,7 @@ h1 {
   display: inline;
 }
 .section4_title_center {
-  padding-left: 0;
+  padding-left: 7px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1930,7 +1938,7 @@ h1 {
 .section4_pay {
   flex-direction: column;
   margin-right: 0px;
-  gap: 39px;
+  gap: 37px;
 }
 .arrow-mob {
   flex-direction: column;
