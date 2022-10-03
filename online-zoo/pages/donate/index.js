@@ -1,3 +1,4 @@
+// форма валидность email //
 let input = document.querySelector('.form-control-footer');
 input.addEventListener('input', onInput);
 const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
@@ -11,56 +12,72 @@ function onInput() {
 function isEmailValid(value) {
 return EMAIL_REGEXP.test(value)};
 
+// бургер меню //
+
 const menu = document.querySelector(".burger_block");
 const menuClose = document.querySelector(".close_burger");
 const menuItem = document.querySelector(".header_list-burger");
 const burgerItem = document.querySelector(".header_burger");
 
-// const meow = document.querySelector(".burger_container")
-
 burgerItem.addEventListener("click", () => {
   menu.classList.toggle("burger_block_active");
   burgerItem.classList.add('inactive')
-  // meow.classList.add('hidden-bur')
-  // wrapper.classList.add("wrapper_mob_click_active");
 });
 menuClose.addEventListener("click", () => {
   menu.classList.remove("burger_block_active");
   burgerItem.classList.remove('inactive')
-  // wrapper.classList.remove("wrapper_mob_click_active");
 });
 menuItem.addEventListener("click", () => {
   menu.classList.remove("burger_block_active");
   burgerItem.classList.remove('inactive')
-  // wrapper.classList.remove("wrapper_mob_click_active");
 });
+
+// количество донатов //
+
+
 const amount = document.querySelectorAll('.slider-radio')
+const dataInput = document.querySelector('.form-control')
+
  function changeInput () {
-  
   for (let i = 0; i < amount.length; i++) {
    if (window.innerWidth < 830) {
      amount[i].checked = false;
      amount[5].checked = true;
+     dataInput.value = amount[5].id.slice(7);
    } else {
     amount[i].checked = false;
     amount[2].checked = true;
-
+    dataInput.value = amount[2].id.slice(7);
    }
-    
   }
  }
 
 document.querySelector('.progress-bar').addEventListener('click', () => {
   for (let i = 0; i < amount.length; i++) {
     if (amount[i].checked) {
-      dataInput = amount[i].id.slice(7);
+      dataInput.value = amount[i].id.slice(7);
       break
     } 
   }
-  document.querySelector('.form-control').value = dataInput
 })
-// dataInput = amount[2].id.slice(7);
+
+dataInput.addEventListener('input', () => {
+  setTimeout (() => {
+    if (dataInput.value.length > 4) {
+      dataInput.value = dataInput.value.substr(0, 4);
+      }
+  })
+  
+} , 500);
+dataInput.addEventListener('input', () => {
+  for (let i = 0; i < amount.length; i++) { 
+    if (dataInput.value === amount[i].id.slice(7)) {
+      amount[i].checked = true
+    }
+   }
+  
+} );
 
  
-
- window.addEventListener('resize', changeInput);
+window.addEventListener('load', changeInput); // при открытии
+window.addEventListener('resize', changeInput); // при изменении
