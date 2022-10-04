@@ -8,6 +8,9 @@ function onInput() {
     input.style.borderColor = 'red';
   }
 }
+
+
+
 function isEmailValid(value) {
 return EMAIL_REGEXP.test(value)};
 
@@ -16,25 +19,37 @@ const menu = document.querySelector(".burger_block");
 const menuClose = document.querySelector(".close_burger");
 const menuItem = document.querySelector(".header_list-burger");
 const burgerItem = document.querySelector(".header_burger");
-// const meow = document.querySelector(".burger_container")
+
 
 burgerItem.addEventListener("click", () => {
-  // meow.classList.add('hidden-bur')
-  menu.classList.toggle("burger_block_active");
+  
+  menu.classList.add("burger_block_active");
   burgerItem.classList.add('inactive')
-  // wrapper.classList.add("wrapper_mob_click_active");
+ 
 });
 menuClose.addEventListener("click", () => {
   menu.classList.remove("burger_block_active");
   burgerItem.classList.remove('inactive')
-  // wrapper.classList.remove("wrapper_mob_click_active");
+ 
 });
 menuItem.addEventListener("click", () => {
   menu.classList.remove("burger_block_active");
   burgerItem.classList.remove('inactive')
-  // wrapper.classList.remove("wrapper_mob_click_active");
+
 });
-// wrapperClick.addEventListener("click", () => {
-//   menu.classList.remove("burger_block_active");
-//   wrapper.classList.remove("wrapper_mob_click_active");
+menu.addEventListener("click", () => { 
+  menu.classList.remove("burger_block_active");
+  burgerItem.classList.remove('inactive')
+ });
+
+
+// попап //
+
+// let feedback = document.querySelector('.feedback_card')
+
+// feedback.addEventListener('click', () => {
+//   console.log('meow')
+//   // for (let i = 0; i < feedback.length; i++) {
+//     feedback.classList.add('popup-container');
+//   // }
 // });

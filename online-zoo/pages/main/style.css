@@ -8,6 +8,18 @@ html {
   outline: 1px solid lawngreen !important; */
   box-sizing: inherit;
 }
+/* .popup-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(20, 20, 20, 0.2);
+  transition: 0.5s all; 
+ }  */
 html {
   scroll-behavior: smooth;
   width: 100%;
@@ -1302,10 +1314,12 @@ align-content: center;
     display: block;
     position: fixed;
     width: 100%;
-    height: 329px;
+    height: 100%;
+    /* height: 329px; */
     top: 0;
     left: 0;
     z-index: 2;
+    background-color: rgba(20, 20, 20, 0.2);
     transform: translateX(100%);
     transition: 0.7s all linear;
   }

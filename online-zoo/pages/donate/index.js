@@ -18,19 +18,28 @@ const menu = document.querySelector(".burger_block");
 const menuClose = document.querySelector(".close_burger");
 const menuItem = document.querySelector(".header_list-burger");
 const burgerItem = document.querySelector(".header_burger");
+const head = document.querySelector(".header_container");
+
 
 burgerItem.addEventListener("click", () => {
   menu.classList.toggle("burger_block_active");
-  burgerItem.classList.add('inactive')
+  burgerItem.classList.add('inactive');
 });
+
 menuClose.addEventListener("click", () => {
   menu.classList.remove("burger_block_active");
   burgerItem.classList.remove('inactive')
+  
 });
+
 menuItem.addEventListener("click", () => {
   menu.classList.remove("burger_block_active");
   burgerItem.classList.remove('inactive')
 });
+menu.addEventListener("click", () => { 
+  menu.classList.remove("burger_block_active");
+  burgerItem.classList.remove('inactive')
+ });
 
 // количество донатов //
 
@@ -85,4 +94,4 @@ dataInput.addEventListener('input', () => {
 
  
 window.addEventListener('load', changeInput); // при открытии
-// window.addEventListener('resize', changeInput); // при изменении
+
