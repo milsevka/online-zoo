@@ -38,19 +38,22 @@ menuItem.addEventListener("click", () => {
 const amount = document.querySelectorAll('.slider-radio')
 const dataInput = document.querySelector('.form-control')
 
- function changeInput () {
-  for (let i = 0; i < amount.length; i++) {
-   if (window.innerWidth < 830) {
-     amount[i].checked = false;
-     amount[5].checked = true;
-     dataInput.value = amount[5].id.slice(7);
-   } else {
-    amount[i].checked = false;
-    amount[2].checked = true;
-    dataInput.value = amount[2].id.slice(7);
-   }
-  }
- }
+//  function changeInput () {
+//   for (let i = 0; i < amount.length; i++) {
+//    if (window.innerWidth < 830) {
+//      amount[i].checked = false;
+//      amount[5].checked = true;
+//      dataInput.value = amount[5].id.slice(7);
+//    } else {
+//     amount[i].checked = false;
+//     amount[2].checked = true;
+//     dataInput.value = amount[2].id.slice(7);
+//    }
+//   }
+//  }
+function changeInput () {
+  dataInput.value = amount[5].id.slice(7);
+} 
 
 document.querySelector('.progress-bar').addEventListener('click', () => {
   for (let i = 0; i < amount.length; i++) {
@@ -73,6 +76,8 @@ dataInput.addEventListener('input', () => {
   for (let i = 0; i < amount.length; i++) { 
     if (dataInput.value === amount[i].id.slice(7)) {
       amount[i].checked = true
+    } else {
+      amount[i].checked = false
     }
    }
   
@@ -80,4 +85,4 @@ dataInput.addEventListener('input', () => {
 
  
 window.addEventListener('load', changeInput); // при открытии
-window.addEventListener('resize', changeInput); // при изменении
+// window.addEventListener('resize', changeInput); // при изменении
