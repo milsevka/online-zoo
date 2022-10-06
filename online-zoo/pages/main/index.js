@@ -45,19 +45,47 @@ menu.addEventListener("click", () => {
 
 // попап //
 
-// let feedback = document.querySelector('.feedback_card')
 
-// feedback.addEventListener('click', () => {
-//   console.log('meow')
-//   // for (let i = 0; i < feedback.length; i++) {
-//     feedback.classList.add('popup-container');
-//   // }
-// });
+
+let wrapperPopup = document.querySelector('.wrapper_popup');
+let contData = document.querySelectorAll('.contacts_data'); 
+let contDataPop = document.querySelector('.contacts_datapop');
+let carousel = document.querySelector('.feedback_wrapper')
+let feedback = document.querySelectorAll('.feedback_title_p');
+let nameP = document.querySelector('.namepop'); 
+let nameFeed = document.querySelectorAll('.nameFeedback');
+let contentPop = document.querySelector('.feedback_title_pop')
+let imgFeed = document.querySelectorAll('.img-feedback')
+let imgPop = document.querySelector('.img-feedback-popup')
+let close = document.querySelector('.close_popup')
+
+close.addEventListener('click', () => {
+  wrapperPopup.classList.remove('open-popup')  
+})
+wrapperPopup.addEventListener('click', () => {
+  wrapperPopup.classList.remove('open-popup')  
+})
+
+
+
+
+let elements = [...document.querySelectorAll('.feedback_card')].forEach(item => { 
+  item.addEventListener('click', ()=>{
+  let indexCard = item.id
+  wrapperPopup.classList.toggle('open-popup')
+nameP.innerHTML = nameFeed[indexCard].textContent;
+contentPop.innerHTML = feedback[indexCard].textContent;
+contDataPop.innerHTML = contData[indexCard].textContent;
+imgPop.src = imgFeed[indexCard].src;
+});
+});
+ 
+  
+
 
 // feedback инпут //
 
 let elem = document.querySelector('input[type="range"]');
-let carousel = document.querySelector('.feedback_wrapper')
 let offset = 0;
 let rangeValue = function(){
 let newValue = elem.value;
