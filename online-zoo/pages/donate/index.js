@@ -18,23 +18,23 @@ const menu = document.querySelector(".burger_block");
 const menuClose = document.querySelector(".close_burger");
 const menuItem = document.querySelector(".header_list-burger");
 const burgerItem = document.querySelector(".header_burger");
-const head = document.querySelector(".header_container");
-
+const main = document.querySelector("body");
 
 burgerItem.addEventListener("click", () => {
-  menu.classList.toggle("burger_block_active");
-  burgerItem.classList.add('inactive');
+  
+  menu.classList.add("burger_block_active");
+  burgerItem.classList.add('inactive')
+ 
 });
-
 menuClose.addEventListener("click", () => {
   menu.classList.remove("burger_block_active");
   burgerItem.classList.remove('inactive')
-  
+ 
 });
-
 menuItem.addEventListener("click", () => {
   menu.classList.remove("burger_block_active");
   burgerItem.classList.remove('inactive')
+
 });
 menu.addEventListener("click", () => { 
   menu.classList.remove("burger_block_active");
@@ -47,19 +47,6 @@ menu.addEventListener("click", () => {
 const amount = document.querySelectorAll('.slider-radio')
 const dataInput = document.querySelector('.form-control')
 
-//  function changeInput () {
-//   for (let i = 0; i < amount.length; i++) {
-//    if (window.innerWidth < 830) {
-//      amount[i].checked = false;
-//      amount[5].checked = true;
-//      dataInput.value = amount[5].id.slice(7);
-//    } else {
-//     amount[i].checked = false;
-//     amount[2].checked = true;
-//     dataInput.value = amount[2].id.slice(7);
-//    }
-//   }
-//  }
 function changeInput () {
   dataInput.value = amount[5].id.slice(7);
 } 

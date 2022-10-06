@@ -136,11 +136,16 @@ li a:hover {
   border: 1px solid #f9804b;
   margin-bottom: 0px;
 }
-/* .hidden-burger {
-  visibility: hidden;
-  top: -999px;
-  transition: 0.5s all;
-}
+ .hidden-burger {
+  /* overflow: hidden; */
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+} /*
 .burger-width-container {
   display: flex;
   justify-content: center;
@@ -971,17 +976,17 @@ color: #000000;
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: rgba(20, 20, 20, 0.2);
     top: 0;
     left: 0;
-    z-index: 2;
-    transform: translateX(100%);
-    transition: 0.7s all linear;
+    background-color: rgba(20, 20, 20, 0.2);
+     transform: translateX(100%);
+     transition: 0.7s all ease 0s;
   }
   .burger_line {
     display: block;
   }
   .burger_block_active {
+    z-index: 999;
     transform: translateX(0);
   }
   .close_burger {

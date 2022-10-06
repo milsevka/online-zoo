@@ -53,3 +53,27 @@ menu.addEventListener("click", () => {
 //     feedback.classList.add('popup-container');
 //   // }
 // });
+
+// feedback инпут //
+
+let elem = document.querySelector('input[type="range"]');
+let carousel = document.querySelector('.feedback_wrapper')
+let offset = 0;
+let rangeValue = function(){
+let newValue = elem.value;
+if (window.innerWidth > 1300) {
+  offset = (newValue * 298) - 298
+  carousel.style.left = -offset + "px";
+
+} else {
+  offset = (newValue * 320) - 320
+  carousel.style.left = -offset + "px";
+  // target.innerHTML = newValue; 
+}
+
+
+}
+
+
+
+elem.addEventListener("input", rangeValue);
