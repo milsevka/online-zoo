@@ -94,6 +94,15 @@ h1 {
   width: 82px;
   position: relative;
 }
+.header_logo-bur img {
+  position: absolute;
+  top: 22px;
+  left: 18px;
+}
+.header_logo-bur {
+  width: 65px;
+  margin-bottom: 18px;
+}
 .logo img {
   position: absolute;
   top: 29px;
@@ -179,7 +188,7 @@ li a:hover {
 .header_list-burger {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 19px;
   padding-left: 0;
   text-decoration: none;
   flex-direction: column;
@@ -1048,7 +1057,9 @@ color: #000000;
 line-height: 120%;
 border: none;
   }
-  
+  .burger_block h1 {
+    font-size: 14px;
+   }
   .panda {
     background-position-x: 37%;
     height: 335px;
@@ -1212,7 +1223,7 @@ h1 {
 }
 
 .header_list-burger {
-  gap: 10px;
+  gap: 15px;
 }
 .header_logo img {
   top: 19px;

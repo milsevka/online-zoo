@@ -8,18 +8,7 @@ html {
   outline: 1px solid lawngreen !important; */
   box-sizing: inherit;
 }
-/* .popup-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(20, 20, 20, 0.2);
-  transition: 0.5s all; 
- }  */
+
 html {
   scroll-behavior: smooth;
   width: 100%;
@@ -89,6 +78,14 @@ h1 {
   position: absolute;
   top: 40px;
   left: 11px;
+}
+.header_logo-bu img {
+  position: absolute;
+  top: 22px;
+  left: 18px;
+}
+.header_logo-bu {
+  width: 65px;
 }
 .header_list {
   /* width: 1160px; */
@@ -176,7 +173,7 @@ li a:hover {
 .header_list-burger {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 19px;
   padding-left: 0;
   text-decoration: none;
   flex-direction: column;
@@ -191,7 +188,7 @@ li a:hover {
 .burger_block h1 {
   color: #f9804b;
   border: 1px solid #f9804b;
-  margin-bottom: 0px;
+  padding-bottom: 3px;
 }
 .close_burger {
   width: 30px;
@@ -700,8 +697,11 @@ li a:hover {
   gap: 30px;
   position: relative;
   left: 0;
-  /* transform: translateX(-30px); */
+  transition: 0.7s all ease 0s;
 }
+
+ 
+
 .feedback_card {
   width: 268px;
   border-radius: 20px;
@@ -1106,8 +1106,8 @@ align-items: center;
   position: absolute;
   top: 5px;
   right: 5px;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
 }
 @media screen and (min-width: 1601px) {
   .section1 {
@@ -1487,7 +1487,9 @@ align-content: center;
 line-height: 120%;
 border: none;
   }
- 
+  .burger_block h1 {
+   font-size: 14px;
+  }
   .header_nav {
     display: none;
   }
@@ -2000,7 +2002,7 @@ h1 {
 }
 
 .header_list-burger {
-  gap: 10px;
+  gap: 18px;
 }
 .titleElipse {
   font-size: 27.2px;
