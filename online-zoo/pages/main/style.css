@@ -58,7 +58,10 @@ h1 {
   border: 1px solid #ffffff;
   padding: 2px;
 }
-
+.scroll {
+  height: 100vh;
+  overflow-y: hidden;
+}
 .header_nav {
   display: flex;
   flex-direction: row;
@@ -192,6 +195,7 @@ li a:hover {
 }
 .close_burger {
   width: 30px;
+  cursor: pointer;
 }
 .header_item-bur a{
   text-decoration: none;
@@ -769,7 +773,7 @@ li a:hover {
     rgba(254, 189, 171, 0.74) rgba(243, 169, 248, 0.66);
 }
 input[type="range"] {
-  -webkit-appearance: none;
+  appearance: none;
 }
 .slider_input::-webkit-slider-thumb {
   appearance: none;
@@ -1101,6 +1105,7 @@ align-items: center;
   width: 320px;
   height: 428px;
   position: relative;
+ 
 }
 .close_popup {
   position: absolute;
@@ -1108,6 +1113,13 @@ align-items: center;
   right: 5px;
   width: 16px;
   height: 16px;
+  cursor: pointer;
+}
+.hystmodal__opened {
+  position: fixed;
+  right: 0;
+  left: 0;
+  overflow: hidden;
 }
 @media screen and (min-width: 1601px) {
   .section1 {

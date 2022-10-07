@@ -36,11 +36,14 @@ menuItem.addEventListener("click", () => {
   burgerItem.classList.remove('inactive')
 
 });
-menu.addEventListener("click", () => { 
-  menu.classList.remove("burger_block_active");
-  burgerItem.classList.remove('inactive')
- });
 
+ menu.onclick = function(event) {
+  let target = event.target; 
+  if (target.className == 'burger_block burger_block_active') {
+    menu.classList.remove("burger_block_active");
+    burgerItem.classList.remove('inactive')
+  } 
+};
 // количество донатов //
 
 

@@ -37,10 +37,16 @@ menuItem.addEventListener("click", () => {
   burgerItem.classList.remove('inactive')
 
 });
-menu.addEventListener("click", () => { 
-  menu.classList.remove("burger_block_active");
-  burgerItem.classList.remove('inactive')
- });
+
+
+menu.onclick = function(event) {
+  let target = event.target; 
+  if (target.className == 'burger_block burger_block_active') {
+    menu.classList.remove("burger_block_active");
+    burgerItem.classList.remove('inactive')
+  } 
+};
+
 
 
 // попап //
@@ -58,14 +64,23 @@ let contentPop = document.querySelector('.feedback_title_pop')
 let imgFeed = document.querySelectorAll('.img-feedback')
 let imgPop = document.querySelector('.img-feedback-popup')
 let close = document.querySelector('.close_popup')
+let body = document.querySelector('body')
+
+
 
 close.addEventListener('click', () => {
-  wrapperPopup.classList.remove('open-popup')  
-})
-wrapperPopup.addEventListener('click', () => {
-  wrapperPopup.classList.remove('open-popup')  
+wrapperPopup.classList.remove('open-popup') 
+body.classList.remove('scroll')
 })
 
+
+wrapperPopup.onclick = function(event) {
+  let target = event.target; 
+  if (target.className == 'wrapper_popup open-popup') {
+    wrapperPopup.classList.remove('open-popup') 
+    body.classList.remove('scroll')
+  } 
+};
 
 
 
@@ -77,10 +92,10 @@ nameP.innerHTML = nameFeed[indexCard].textContent;
 contentPop.innerHTML = feedback[indexCard].textContent;
 contDataPop.innerHTML = contData[indexCard].textContent;
 imgPop.src = imgFeed[indexCard].src;
+body.classList.add('scroll')
 });
 });
- 
-  
+
 
 
 // feedback инпут //
@@ -92,16 +107,9 @@ let newValue = elem.value;
 if (window.innerWidth > 1300) {
   offset = (newValue * 298) - 298
   carousel.style.left = -offset + "px";
-
 } else {
   offset = (newValue * 320) - 320
   carousel.style.left = -offset + "px";
-  // target.innerHTML = newValue; 
 }
-
-
 }
-
-
-
 elem.addEventListener("input", rangeValue);
