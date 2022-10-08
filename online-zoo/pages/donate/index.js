@@ -71,6 +71,7 @@ dataInput.addEventListener('input', () => {
   })
   
 } , 500);
+
 dataInput.addEventListener('input', () => {
   for (let i = 0; i < amount.length; i++) { 
     if (dataInput.value === amount[i].id.slice(7)) {

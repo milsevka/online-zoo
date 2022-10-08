@@ -38,7 +38,6 @@ menuItem.addEventListener("click", () => {
 
 });
 
-
 menu.onclick = function(event) {
   let target = event.target; 
   if (target.className == 'burger_block burger_block_active') {
@@ -47,11 +46,7 @@ menu.onclick = function(event) {
   } 
 };
 
-
-
 // попап //
-
-
 
 let wrapperPopup = document.querySelector('.wrapper_popup');
 let contData = document.querySelectorAll('.contacts_data'); 
@@ -73,7 +68,6 @@ wrapperPopup.classList.remove('open-popup')
 body.classList.remove('scroll')
 })
 
-
 wrapperPopup.onclick = function(event) {
   let target = event.target; 
   if (target.className == 'wrapper_popup open-popup') {
@@ -81,8 +75,6 @@ wrapperPopup.onclick = function(event) {
     body.classList.remove('scroll')
   } 
 };
-
-
 
 let elements = [...document.querySelectorAll('.feedback_card')].forEach(item => { 
   item.addEventListener('click', ()=>{
@@ -95,8 +87,6 @@ imgPop.src = imgFeed[indexCard].src;
 body.classList.add('scroll')
 });
 });
-
-
 
 // feedback инпут //
 
@@ -113,3 +103,135 @@ if (window.innerWidth > 1300) {
 }
 }
 elem.addEventListener("input", rangeValue);
+
+// слайдер
+
+const arrowRight = document.querySelector('.section3_animals_arrowright');
+const arrowLeft = document.querySelector('.section3_animals_arrow');
+
+
+const cardSlider = document.querySelectorAll('.card_animals');
+const slider = document.querySelector('.slider-pets');
+
+const left = document.querySelector('.section3_wrapper-left');
+const center = document.querySelector('.section3_wrapper-center');
+const right = document.querySelector('.section3_wrapper-right');
+
+
+const card1 = document.querySelector('#card1');
+const card2 = document.querySelector('#card2');
+const card3 = document.querySelector('#card3');
+const card4 = document.querySelector('#card4');
+const card5 = document.querySelector('#card5');
+const card6 = document.querySelector('#card6');
+const card7 = document.querySelector('#card7');
+const card8 = document.querySelector('#card8');
+
+let cardsArray = [card1, card2, card3, card4, card5, card6, card7, card8];
+
+const moveLeft = () => {
+  if (window.innerWidth > 1100) slider.classList.add('left-transition');
+  if (window.innerWidth < 1100 && window.innerWidth > 800) slider.classList.add('left-transition-tablet');
+  if (window.innerWidth < 799) slider.classList.add('left-transition-small');
+
+  slider.classList.remove('right-transition');
+  slider.classList.remove('right-transition-tablet');
+  slider.classList.remove('right-transition-small');
+ 
+    arrowLeft.setAttribute('disabled', true)
+     arrowRight.setAttribute('disabled', true)
+}
+
+const moveRight = () => {
+  if (window.innerWidth > 1100) slider.classList.add('right-transition');
+  if (window.innerWidth < 1100 && window.innerWidth > 800) slider.classList.add('right-transition-tablet');
+  if (window.innerWidth < 799) slider.classList.add('right-transition-small');
+  slider.classList.remove('left-transition');
+  slider.classList.remove('left-transition-tablet');
+  slider.classList.remove('left-transition-small');
+
+    arrowLeft.setAttribute('disabled', true)
+     arrowRight.setAttribute('disabled', true)
+}
+
+const generateLeft = () => {
+  let randomCards = []
+  while (randomCards.length < 6) {
+    let num = Math.floor(Math.random() * 8);
+    randomCards.push(cardsArray[num]);
+    randomCards = [...new Set(randomCards)];
+  }
+  // left.innerHTML = '';
+  if (window.innerWidth > 800) {
+    left.innerHTML = '';
+    left.appendChild(randomCards[0]);
+    left.appendChild(randomCards[1]);
+    left.appendChild(randomCards[2]);
+    left.appendChild(randomCards[3]);
+     left.appendChild(randomCards[4]);
+     left.appendChild(randomCards[5]);
+  } else {
+    left.innerHTML = '';
+    left.appendChild(randomCards[0]);
+    left.appendChild(randomCards[1]);
+    left.appendChild(randomCards[2]);
+    left.appendChild(randomCards[3]);
+  }
+ 
+}
+const generateRight = () => {
+  let randomCards = []
+  while (randomCards.length < 6) {
+    let num = Math.floor(Math.random() * 8);
+    randomCards.push(cardsArray[num]);
+    randomCards = [...new Set(randomCards)];
+  }
+  if (window.innerWidth > 800) {
+    right.innerHTML = '';
+    right.appendChild(randomCards[0]);
+    right.appendChild(randomCards[1]);
+    right.appendChild(randomCards[2]);
+    right.appendChild(randomCards[3]);
+    right.appendChild(randomCards[4]);
+    right.appendChild(randomCards[5]);
+  } else {
+    right.innerHTML = '';
+    right.appendChild(randomCards[0]);
+    right.appendChild(randomCards[1]);
+    right.appendChild(randomCards[2]);
+    right.appendChild(randomCards[3]);
+  }
+}
+
+
+arrowRight.addEventListener('click', () => {
+  moveRight()
+   generateRight()
+})
+
+arrowLeft.addEventListener('click', () => {
+  moveLeft()
+  generateLeft()
+})
+
+
+slider.addEventListener('animationend', (ev) => {
+  if (ev.animationName === 'move-left' || ev.animationName === 'move-left-tablet') {
+     slider.classList.remove('left-transition');
+     slider.classList.remove('left-transition-tablet');
+     slider.classList.remove('left-transition-small');
+    right.innerHTML = left.innerHTML;
+    center.innerHTML = left.innerHTML;
+  } else if (ev.animationName === 'move-right' || ev.animationName === 'move-right-tablet') {
+    slider.classList.remove('right-transition');
+    slider.classList.remove('right-transition-tablet');
+    slider.classList.remove('right-transition-small');
+    left.innerHTML = right.innerHTML;
+    center.innerHTML = right.innerHTML;
+  }
+  arrowLeft.removeAttribute('disabled');
+  arrowRight.removeAttribute('disabled');
+  console.log('meow')
+})
+
+
