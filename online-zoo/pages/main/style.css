@@ -354,51 +354,22 @@ li a:hover {
   justify-content: center;
 }
 .left-transition {
-  left: 1180px;
+  /* left: 1180px; */
+  left: 100%;
   position: relative;
   animation-name: move-left;
   animation-duration: 2s;
 }
-.left-transition-tablet {
-  left: 945px;
-  position: relative;
-  animation-name: move-left-tablet;
-  animation-duration: 2s;
-}
-.left-transition-small {
-  left: 628px;
-  position: relative;
-  animation-name: move-left-tablet;
-  animation-duration: 2s;
-}
+
 .right-transition {
   position: relative;
-  left: -1180px;
+  /* left: -1180px; */
+  left: -100%;
   animation-name: move-right;
-  animation-duration: 2s;
-}
-.right-transition-tablet {
-  position: relative;
-  left: -945px;
-  animation-name: move-right-tablet;
-  animation-duration: 2s;
-}
-.right-transition-small {
-  left: -628px;
-  position: relative;
-  animation-name: move-right-tablet;
   animation-duration: 2s;
 }
 
 @keyframes move-left {
-  from {
-    transform: translateX(-33%);
-  }
-  to {
-    transform: translateX(0%);
-  }
-}
-@keyframes move-left-tablet {
   from {
     transform: translateX(-33%);
   }
@@ -414,14 +385,7 @@ li a:hover {
     transform: translateX(0%);
   }
 }
-@keyframes move-right-tablet {
-  from {
-    transform: translateX(33%);
-  }
-  to {
-    transform: translateX(0%);
-  }
-}
+
 .section3-btn {
   display: flex;
   justify-content: center;

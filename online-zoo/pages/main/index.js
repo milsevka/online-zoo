@@ -122,28 +122,16 @@ const card8 = document.querySelector("#card8");
 let cardsArray = [card1, card2, card3, card4, card5, card6, card7, card8];
 
 const moveLeft = () => {
-  if (window.innerWidth > 1100) slider.classList.add("left-transition");
-  if (window.innerWidth < 1100 && window.innerWidth > 800)
-    slider.classList.add("left-transition-tablet");
-  if (window.innerWidth < 799) slider.classList.add("left-transition-small");
-
+  slider.classList.add("left-transition");
   slider.classList.remove("right-transition");
-  slider.classList.remove("right-transition-tablet");
-  slider.classList.remove("right-transition-small");
 
   arrowLeft.setAttribute("disabled", true);
   arrowRight.setAttribute("disabled", true);
 };
 
-const moveRight = () => {
-  if (window.innerWidth > 1100) slider.classList.add("right-transition");
-  if (window.innerWidth < 1100 && window.innerWidth > 800)
-    slider.classList.add("right-transition-tablet");
-  if (window.innerWidth < 799) slider.classList.add("right-transition-small");
+const moveRight = () => { 
+  slider.classList.add("right-transition");
   slider.classList.remove("left-transition");
-  slider.classList.remove("left-transition-tablet");
-  slider.classList.remove("left-transition-small");
-
   arrowLeft.setAttribute("disabled", true);
   arrowRight.setAttribute("disabled", true);
 };
@@ -155,7 +143,6 @@ const generateLeft = () => {
     randomCards.push(cardsArray[num]);
     randomCards = [...new Set(randomCards)];
   }
-  // left.innerHTML = '';
   if (window.innerWidth > 800) {
     left.innerHTML = "";
     left.appendChild(randomCards[0]);
@@ -208,25 +195,20 @@ arrowLeft.addEventListener("click", () => {
 
 slider.addEventListener("animationend", (ev) => {
   if (
-    ev.animationName === "move-left" ||
-    ev.animationName === "move-left-tablet"
+    ev.animationName === "move-left"
   ) {
     slider.classList.remove("left-transition");
-    slider.classList.remove("left-transition-tablet");
-    slider.classList.remove("left-transition-small");
+   
     right.innerHTML = left.innerHTML;
     center.innerHTML = left.innerHTML;
   } else if (
-    ev.animationName === "move-right" ||
-    ev.animationName === "move-right-tablet"
+    ev.animationName === "move-right"
   ) {
     slider.classList.remove("right-transition");
-    slider.classList.remove("right-transition-tablet");
-    slider.classList.remove("right-transition-small");
     left.innerHTML = right.innerHTML;
     center.innerHTML = right.innerHTML;
   }
   arrowLeft.removeAttribute("disabled");
   arrowRight.removeAttribute("disabled");
-  console.log("meow");
+  
 });
